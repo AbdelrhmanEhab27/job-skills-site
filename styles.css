@@ -1,0 +1,123 @@
+/* خطوط وألوان خلفية */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      direction: rtl;
+      padding: 40px 20px;
+      background: #f7f9fc;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* العنوان */
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 30px;
+      color: #004085;
+      text-shadow: 0 1px 3px rgba(0, 64, 133, 0.3);
+    }
+
+    /* صندوق الإدخال والأزرار */
+    #skillsInput {
+      width: 100%;
+      max-width: 400px;
+      padding: 15px 20px;
+      font-size: 1.1rem;
+      border: 2px solid #007bff;
+      border-radius: 8px;
+      transition: border-color 0.3s ease;
+      outline: none;
+      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.15);
+      margin-bottom: 15px;
+    }
+    #skillsInput:focus {
+      border-color: #0056b3;
+      box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+    }
+
+    button {
+      width: 100%;
+      max-width: 400px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    button:hover {
+      background-color: #0056b3;
+      box-shadow: 0 6px 15px rgba(0, 86, 179, 0.6);
+    }
+    button:active {
+      background-color: #004085;
+      box-shadow: 0 2px 6px rgba(0, 64, 133, 0.7);
+    }
+
+    /* صندوق النتائج */
+    #results {
+      width: 100%;
+      max-width: 600px;
+      background: white;
+      border-radius: 12px;
+      padding: 25px 30px;
+      margin-top: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      min-height: 100px;
+    }
+
+    /* عنوان النتائج */
+    #results strong {
+      font-size: 1.4rem;
+      color: #004085;
+      margin-bottom: 15px;
+      display: block;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 8px;
+    }
+
+    /* قائمة الوظائف */
+    #results ul {
+      list-style-type: decimal;
+      padding-right: 20px;
+      margin-top: 15px;
+    }
+    #results li {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      color: #222;
+      line-height: 1.5;
+      padding-left: 6px;
+      border-left: 4px solid #007bff;
+      transition: background-color 0.3s ease;
+      border-radius: 4px;
+      cursor: default;
+    }
+    #results li:hover {
+      background-color: #e6f0ff;
+    }
+
+    /* رسالة عدم وجود نتائج */
+    #results:not(:empty):not(:has(ul)) {
+      font-size: 1.2rem;
+      color: #a94442;
+      padding: 10px;
+      border: 1px solid #a94442;
+      border-radius: 8px;
+      background-color: #f2dede;
+      max-width: 600px;
+      margin: 20px auto 0 auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      #skillsInput, button, #results {
+        max-width: 100%;
+      }
+    }
